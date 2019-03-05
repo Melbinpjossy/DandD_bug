@@ -58,12 +58,18 @@
 	dropZones.forEach(zone =>{
 		zone.addEventListener("drop", function(e) {
 			e.preventDefault();
-			console.log("you dropped something on me");
 
-			
+			let boxContent = zone.innerHTML;
+			if(!boxContent) {
 
 			let item = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${item}`));
+			console.log("you dropped something on me");
+		}
+		else {
+			e.preventDefault();
+		}
+
 		
 		
 		});

@@ -17,7 +17,7 @@ Problem 2:\
 The issue was, when we try to place a piece of image on another image in the drop zone, it disappears. Only refreshing the the webpage will bring those back. Basically solved it using an if condition to check if there is more than 1 child created in this line 		\'93e.target.appendChild(document.querySelector(`#$\{item\}`));\'94\
 \
 Include this codes:\
-l		et boxContent = zone.innerHTML;\
+l		let boxContent = zone.innerHTML;\
 			if(!boxContent) \{\
 \
 			let item = e.dataTransfer.getData("text/plain");\
